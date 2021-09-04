@@ -7,8 +7,10 @@ const display = document.getElementById('img-display');
 const iconDisplay = document.getElementById('icon-display');
 const warning = document.getElementById('warning');
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=dhaka&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9';
+input.focus();
 
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=dhaka&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9';
+const img = document.createElement('img');
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -20,20 +22,15 @@ fetch(url)
         temp.innerText = dTemp;
         desc.innerText = dDesc;
 
-        const img = document.createElement('img');
         img.src = 'https://openweathermap.org/img/wn/'+dicon+'@2x.png';
         display.appendChild(img);
 })
 
 
-
-const img = document.createElement('img');
-
 btn.addEventListener("click", function () {
     warning.innerText = '';
-    display.style.display = "none";
     const city = input.value;
-    if (city != 0 && city != null) {
+    if (city != '' && city != null) {
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9')
             .then(response => response.json())
             .then(data => {
@@ -49,7 +46,7 @@ btn.addEventListener("click", function () {
 
                 
                 img.src = 'https://openweathermap.org/img/wn/' + icon + '@2x.png';
-                iconDisplay.appendChild(img);
+                display.appendChild(img);
 
             })
             .catch(err => {
