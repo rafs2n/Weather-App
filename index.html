@@ -17,14 +17,17 @@
         <div class="row">
             <div class="col-md-9 input">
                 <input id="input" type="text" class="form-control radius-none" placeholder="Enter a city">
+                <div id="warning"></div>
             </div>
             <div class="col-md-3 button">
                 <button id="btn" type="button" class="btn btn-block btn-dark radius-none"><i class="fa fa-search"></i> Search</button>
             </div>
-            <div class="col-md-12 text-center text-white display">
-                <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <div class="col-md-12 text-center text-white display" id="display">
+
+                <div id="img-display"></div>
+                <div id="icon-display"></div>
                 <h1><span id="city-name">Dhaka</span></h1>
-                <h2><span id="temp">30.06</span>&deg;</h2>
+                <h2><span id="temp">30.06</span>&deg; C</h2>
                 <h3><span id="desc">Clouds</span></h3>
 
             </div>
