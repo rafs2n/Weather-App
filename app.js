@@ -37,6 +37,7 @@ btn.addEventListener("click", function () {
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=93d71f6bc1ab4092643bae17067ef4c9')
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 const cityName = data.name;
                 const temperature = data.main.temp;
                 const descrip = data.weather[0].main;
@@ -59,7 +60,7 @@ btn.addEventListener("click", function () {
         
     } else {
         const small = document.createElement('small');
-        small.innerText = 'Invalid Input'
+        small.innerText = 'invalid input'
         warning.appendChild(small);
     }
 

@@ -2,6 +2,7 @@ body {
   /* position: absolute; */
   background-image: url("img/back.jpg");
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -19,42 +20,47 @@ body {
 }
 .row {
   /* border: 2px solid red; */
-  width: 50%;
+  width: 40%;
   margin: 100px auto;
   padding: 0px;
 }
-.button button {
+#display{
+  margin-top: 70px;
+}
+#input{
   padding: 10px;
-  font-size: 16px;
+  font-size: 19px;
 }
-.input input {
-  padding: 10px;
-  font-size: 16px;
+#btn{
+  font-size: 19px;
+  padding: 0px 30px;
 }
-.button i {
-  font-size: 16px;
-  padding: 0px 5px;
-}
-.display {
-  margin-top: 100px;
-}
-
 #warning{
   color: white;
 }
 
+.footer{
+  margin-top: 250px;
+  text-align: center;
+}
+.footer a{
+  text-decoration: none;
+  color: aquamarine;
+}
+
+
 @media screen and (max-width: 768px) {
-  .row {
+  .row{
     width: 100%;
   }
-  .button button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 16px;
+  #btn{
+    padding:0px 20px;
   }
-  .input input {
-    padding: 10px;
-    font-size: 16px;
+  
+}
+
+@media screen and (max-width: 414px){
+  .footer{
+    margin-top: 250px;
   }
 }

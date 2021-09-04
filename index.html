@@ -15,22 +15,29 @@
 <body>
     <div class="container-fluid overlay">
         <div class="row">
-            <div class="col-md-9 input">
-                <input id="input" type="text" class="form-control radius-none" placeholder="Enter a city">
-                <div id="warning"></div>
+
+            <div class="input-group">
+                <input id="input" type="text" class="form-control" placeholder="Enter a city">
+                
+                <div class="input-group-append">
+                    <button id="btn" class="btn btn-dark"><i class="fa fa-search"></i> Search</button>
+                </div>
             </div>
-            <div class="col-md-3 button">
-                <button id="btn" type="button" class="btn btn-block btn-dark radius-none"><i class="fa fa-search"></i> Search</button>
-            </div>
+            <div id="warning"></div>
+
             <div class="col-md-12 text-center text-white display" id="display">
 
                 <div id="img-display"></div>
                 <div id="icon-display"></div>
-                <h1><span id="city-name">Dhaka</span></h1>
-                <h2><span id="temp">30.06</span>&deg; C</h2>
-                <h3><span id="desc">Clouds</span></h3>
+                <h1><span id="city-name"></span></h1>
+                <h2><span id="temp"></span>&deg; C</h2>
+                <h3><span id="desc"></span></h3>
 
             </div>
+            
+        </div>
+        <div class="footer text-white">
+            <p>Developled with <i class="fa fa-heart"></i> by <a href="https://www.facebook.com/rafsan.anip/" target="_blank">Aziz</a></p>
         </div>
         
     </div>
